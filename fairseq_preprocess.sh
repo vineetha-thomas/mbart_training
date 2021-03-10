@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SRC=de
-DST=hsb
+TGT=hsb
 DATA=dataset
 DICT=dataset/dict.txt
 TRAIN=train
@@ -18,4 +18,5 @@ fairseq-preprocess \
   --thresholdsrc 0 \
   --srcdict ${DICT} \
   --tgtdict ${DICT} \
+  --task multilingual_denoising \
   --workers 70
