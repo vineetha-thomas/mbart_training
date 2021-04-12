@@ -1,3 +1,15 @@
+(----ReadMe update on 11 April 2021----)
+- fairseq scripts are updated and tested.
+- Refer to the readme update below. Steps 1-7 needs to be done.
+- Step 8 is not required as  I use --joined-dictionary option in fairseq-prepreocess.
+- Run fairseq_preprocess.sh. For the 'multilingal_denoising' task of fairseq, it expects the preprocessed language data to be in two separate folders. This is taken care of in the script. The final preprocessed files are put in a folder 'preprocessed'
+- Run fairseq_train.sh, it saves the checkpoints. To modify the training parameters, this script needs to be modified.
+
+NOTE: As testing, running the fairseq_train.sh for a couple of epochs to genertae the model checkpoint has been tested on a very small portion of data. testing on the entire corpus and validating the model itself is not done.
+
+ 
+
+
 (----ReadMe update on 10 March 2021----)
 
 Based on the preious experiments, huggingface alone cannot be used in our case, as it does not do the preprocessing or the noising part as required by the mbart. Henc ewe decided to switch to fairseq code repo. For that, below are the basic steps.
